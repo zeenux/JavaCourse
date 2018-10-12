@@ -1,5 +1,6 @@
 class House{
 
-  Door mainDoor, drawingRoomDoor;
-  
+  Door mainDoor;
+  Room drawingRoom, livingRoom, bedroom;
+
 }
