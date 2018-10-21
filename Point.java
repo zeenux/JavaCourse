@@ -16,10 +16,10 @@ class Point {
     public int getY(){
         return this.y;
     }
-	public Point(int x, int y){
+	  public Point(int x, int y){
 	    this.setX(x);
 	    this.setY(y);
-	}
+	   }
 	public void move(int x, int y){
 	    this.x=this.x+x;
 	    this.y=this.y+y;
