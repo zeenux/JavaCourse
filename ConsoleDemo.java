@@ -17,14 +17,10 @@ class ConsoleDemo
 
         // Read a string and then display it.
         str = con.readLine("Enter your name: ");
+        String strHeight=con.readLine("Enter your height");
+        int sHeight=Integer.parseInt(strHeight);
         con.printf("Here is your name: %s\n", str);
 
-        //to read password and then display it
-        System.out.println("Enter the password: ");
-        char[] ch=con.readPassword();
-
-        //converting char array into string
-        String pass = String.valueOf(ch);
-        System.out.println("Password is: " + pass);
+        System.out.println("Your Height is "+sHeight);
     }
-} 
+}
