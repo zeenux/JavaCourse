@@ -9,14 +9,17 @@ class WriteToFile{
 
   public static void main(String[] args) {
     //Call Every Method here with Try catch block;;
-    
+
   }
 //Using BufferedWriter
-public static void usingBufferedWritter() throws IOException
+public static void usingBufferedWriter() throws IOException
 {
     String fileContent = "Hello Learner !! Welcome to howtodoinjava.com.";
-
-    BufferedWriter writer = new BufferedWriter(new FileWriter("c:/temp/samplefile1.txt"));
+    /*
+    The java.io.BufferedWriter.write(String str) method writes a string to the writer.
+    */
+    FileWriter fw=new FileWriter("d:/java/abc.txt");
+    BufferedWriter writer = new BufferedWriter(fw);
     writer.write(fileContent);
     writer.close();
 }

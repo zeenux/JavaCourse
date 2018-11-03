@@ -1,4 +1,3 @@
-package com.howtodoinjava.examples.io;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -15,14 +14,16 @@ public class CreateNewFile
 {
     public static void main(String[] args) throws IOException
     {
-        createFileUsingFileClass();
-        createFileUsingFileOutputStreamClass();
-        createFileIn_NIO();
+      //  createFileUsingFileClass();
+
+      createFileUsingFileOutputStreamClass();
+
+    //createFileIn_NIO();
     }
 
     private static void createFileUsingFileClass() throws IOException
     {
-          File file = new File("c://temp//testFile1.txt");
+          File file = new File("d:\\java\\HelloWorld.txt");
 
           //Create the file
           if (file.createNewFile()){
@@ -33,14 +34,14 @@ public class CreateNewFile
 
           //Write Content
           FileWriter writer = new FileWriter(file);
-          writer.write("Test data");
+          writer.write("I am writing this data to Test if i can write toa  file using java");
           writer.close();
     }
 
     private static void createFileUsingFileOutputStreamClass() throws IOException
     {
         String data = "Test data";
-        FileOutputStream out = new FileOutputStream("c://temp//testFile2.txt");
+        FileOutputStream out = new FileOutputStream("d://java//createFileUsingFileOutputStream.txt");
         out.write(data.getBytes());
         out.close();
     }
@@ -48,16 +49,13 @@ public class CreateNewFile
     private static void createFileIn_NIO()  throws IOException
     {
         String data = "Test data";
-        Files.write(Paths.get("c://temp//testFile3.txt"), data.getBytes());
+        Files.write(Paths.get("d://java//testFile3.txt"), data.getBytes());
 
         //or
 
         List<String> lines = Arrays.asList("1st line", "2nd line");
 
-        Files.write(Paths.get("file6.txt"),
-                    lines,
-                    StandardCharsets.UTF_8,
-                    StandardOpenOption.CREATE,
+        Files.write(Paths.get("file6.txt"), lines, StandardCharsets.UTF_8,StandardOpenOption.CREATE,
                     StandardOpenOption.APPEND);
     }
 }

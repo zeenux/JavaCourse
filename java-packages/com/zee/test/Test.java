@@ -1,4 +1,4 @@
-package com.zee;
+package com.zee.test;
 class Test{
 
   public static void main(String[] args) {
