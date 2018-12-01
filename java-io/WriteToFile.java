@@ -18,8 +18,8 @@ public static void usingBufferedWriter() throws IOException
     /*
     The java.io.BufferedWriter.write(String str) method writes a string to the writer.
     */
-    FileWriter fw=new FileWriter("d:/java/abc.txt");
-    BufferedWriter writer = new BufferedWriter(fw);
+    //FileWriter fw=;
+    BufferedWriter writer = new BufferedWriter(new FileWriter("d:/java/abc.txt"));
     writer.write(fileContent);
     writer.close();
 }

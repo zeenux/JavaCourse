@@ -12,11 +12,16 @@ import java.util.List;
 
 public class CreateNewFile
 {
-    public static void main(String[] args) throws IOException
+    public static void main(String[] args) //throws IOException
     {
       //  createFileUsingFileClass();
+      try{
+          createFileUsingFileOutputStreamClass();
+      }
+      catch(IOException ie){
+        System.out.println("Gharib tabah de");
+      }
 
-      createFileUsingFileOutputStreamClass();
 
     //createFileIn_NIO();
     }
