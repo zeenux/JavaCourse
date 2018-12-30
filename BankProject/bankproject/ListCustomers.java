@@ -12,9 +12,8 @@ class ListCustomers{
       while(it.hasNext()){
         Customer cc=(Customer)it.next();
         System.out.println("Account NO: "+cc.getAccountID()+"\t Full Name: "+cc.getFname()+" "+cc.getLname());
-  
+
 
       }
     }
   }
-}
